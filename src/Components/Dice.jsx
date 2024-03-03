@@ -118,7 +118,7 @@ const Dice = ({co, socket, setdiceVal, setdiceActive, diceActive, possibleMoveCh
   socket.on('visDice', (chanceColor) => {
     console.log("chancecolor:", chanceColor);
     setcurrColor(chanceColor);
-  })
+  });
 
 
   return (
