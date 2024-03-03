@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import bgImage from "../assets/bgmain.png"
 import mainAudio from "../assets/music/mainAudio.mp3";
 import Dicefront from "./Dicefront";
