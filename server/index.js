@@ -11,7 +11,7 @@ const server = http.createServer(app);
 
 app.use(
 	cors({
-		origin:"https://ludo-online.vercel.app/",
+		origin:"*",
 		credentials:true,
 	})
 );
