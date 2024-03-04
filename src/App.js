@@ -9,6 +9,8 @@ import Game from "./Components/Game";
 import { nanoid } from "nanoid";
 import WaitingRoom from "./Components/WaitingRoom";
 
+const BASE_URL = process.env.REACT_APP_BASE_URL
+
 const socket = io.connect('http://localhost:4000',{
   withCredentials: true,
 });
