@@ -225,6 +225,13 @@ io.on("connection", (socket) => {
 
 });
 
+app.get("/", (req, res) => {
+	return res.json({
+		success:true,
+		message:'Your server is up and running....'
+	});
+});
+
 const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => { 
     console.log(`App is listening at ${PORT}`);
