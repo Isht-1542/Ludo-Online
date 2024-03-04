@@ -293,9 +293,9 @@ h1 {
 {
   0%
   {
-    transform:  scale(0.4) translateX(220vh) translateY(-116vh) rotateX(-25deg) rotateY(0deg) ;
+    transform:  scale(0.4) translateX(222vh) translateY(-116vh) rotateX(-25deg) rotateY(0deg) ;
   }
   100%{
-    transform:  scale(0.4) translateX(220vh) translateY(-116vh) rotateX(-25deg) rotateY(720deg); 
+    transform:  scale(0.4) translateX(222vh) translateY(-116vh) rotateX(-25deg) rotateY(720deg); 
   }
 }

@@ -58,7 +58,7 @@ const Board = ({socket, board, movePiece, isMoveDone}) => {
                     <div className="text-white h-full w-2/5 grid grid-cols-6 bg-yellow" >
                         {arr2.map((item) => (
                             <div key={item} id="item" className={`relative text-black rounded-md border border-black ${blue.includes(item) ? 'bg-blue-500':'bg-white'}`}>
-                                {item}
+                                {/* {item} */}
                                 {safe1.includes(item) && 
                                 <img src={star} alt="star" className="star absolute"/>}
                                 {board["blue"].includes(item) && <Piece colorInd={0} movePiece={movePiece} id={item} isMoveDone={isMoveDone}/>}
@@ -110,7 +110,7 @@ const Board = ({socket, board, movePiece, isMoveDone}) => {
                     <div className="text-white h-full w-2/5 grid grid-cols-6 bg-yellow" >
                         {arr3.map((item, index) => (
                             <div key={index} id="item" className={`relative text-black rounded-md border border-black ${yellow.includes(item) ? 'bg-yellow-500':'bg-white'}`}>
-                                {item}
+                                {/* {item} */}
                                 {safe1.includes(item) && 
                                 <img src={star} alt="star" className="star absolute"/>}
                                 {board["blue"].includes(item) && <Piece colorInd={0} movePiece={movePiece} id={item} isMoveDone={isMoveDone}/>}
@@ -128,7 +128,7 @@ const Board = ({socket, board, movePiece, isMoveDone}) => {
                     <div className="text-white h-full w-1/5 grid grid-cols-3 bg-yellow" >
                         {arr4.map((item, index) => (
                             <div key={index} id="item" className={`relative text-black rounded-md border border-black ${green.includes(item) ? 'bg-green-500':'bg-white'}`}>
-                                {item}
+                                {/* {item} */}
                                 {safe1.includes(item) && 
                                 <img src={star} alt="star" className="star absolute"/>}
                                 {board["blue"].includes(item) && <Piece colorInd={0} movePiece={movePiece} id={item} isMoveDone={isMoveDone}/>}
