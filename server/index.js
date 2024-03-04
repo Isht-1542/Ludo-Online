@@ -11,13 +11,13 @@ const server = http.createServer(app);
 
 app.use(
 	cors({
-		origin:"*",
+		origin:"https://ludo-online.vercel.app/",
 		credentials:true,
 	})
 );
 
 const io = new Server(server, {
-    cors: {origin:"http://localhost:3000",
+    cors: {origin:"https://ludo-online.vercel.app/",
 			credentials:true,
             methods:['GET','POST']
         }
