@@ -125,7 +125,7 @@ const Dice = ({co, socket, setdiceVal, setdiceActive, diceActive, possibleMoveCh
     <div className="container h-full w-full">
     {(currColor===co) &&
     <div className="container w-full h-full flex flex-col items-center justify-center" onClick={rollDice}>  
-      <div className={`dice hover:animate-none ${diceActive && 'motion-safe:animate-bounce'}`}>
+      <div id="dice" className={`dice hover:animate-none ${diceActive && 'motion-safe:animate-bounce'}`}>
           <div className="face front"></div>
           <div className="face back">
             <div className="dot six-1"></div>
