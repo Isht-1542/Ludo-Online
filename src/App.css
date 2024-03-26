@@ -59,10 +59,10 @@ h1 {
 
 .dice {
   position: relative;
-  --width: 70px;
-  --half-width: calc(var(--width) / 2);
-  width: var(--width);
-  padding-bottom: 75%;
+  /* --width: 70px; */
+  /* --half-width: calc(var(--width) / 2); */
+  width: 70px;
+  /* padding-bottom: 75%; */
   height: 70px;
   transform-style: preserve-3d;
   transition: 1s ease;
@@ -73,8 +73,8 @@ h1 {
   .dice {
     position: relative;
     --width: 25px;
-    --half-width: calc(var(--width) / 2);
-    width: var(--width);
+    /* --half-width: calc(var(--width) / 2); */
+    width: 25px;
     /* padding-bottom: 75%; */
     height: 25px;
     transform-style: preserve-3d;
@@ -126,7 +126,7 @@ h1 {
   height: 100%;
   border-radius: 21%;
   /* background: #f6f3f0; */
-  /*transform: translateZ(-1px);*/
+  transform: translateZ(-1px);
 }
 
 .face1::before {
@@ -158,27 +158,27 @@ h1 {
 }
 
 .front {
-  transform: translateZ(calc(var(--width) / 2));
+  transform: translateZ(35px);
 }
 
 .back {
-  transform: rotateX(180deg) translateZ(calc(var(--width) / 2));
+  transform: rotateX(180deg) translateZ(35px);
 }
 
 .top {
-  transform: rotateX(90deg) translateZ(calc(var(--width) / 2));
+  transform: rotateX(90deg) translateZ(35px);
 }
 
 .bottom {
-  transform: rotateX(-90deg) translateZ(calc(var(--width) / 2));
+  transform: rotateX(-90deg) translateZ(35px);
 }
 
 .right {
-  transform: rotateY(90deg) translateZ(calc(var(--width) / 2));
+  transform: rotateY(90deg) translateZ(35px);
 }
 
 .left {
-  transform: rotateY(-90deg) translateZ(calc(var(--width) / 2));
+  transform: rotateY(-90deg) translateZ(35px);
 }
 
 .front::after {

@@ -119,15 +119,6 @@ const Dice = ({co, socket, setdiceVal, setdiceActive, diceActive, possibleMoveCh
     console.log("chancecolor:", chanceColor);
     setcurrColor(chanceColor);
   });
-
-  
-  useEffect(() => {
-    // Get the computed value of --half-width
-    const halfWidth = getComputedStyle(document.documentElement).getPropertyValue('--half-width');
-
-    // Print the value in the console
-    console.log("Half width:", halfWidth);
-  }, []);
   
   
   return (
