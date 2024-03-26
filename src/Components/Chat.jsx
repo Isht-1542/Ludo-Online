@@ -4,11 +4,14 @@ import Messages from "./Message/Messages";
 import { IoSend } from "react-icons/io5";
 import EmojiPicker  from "emoji-picker-react";
 import { MdOutlineEmojiEmotions } from "react-icons/md";
+import { LuMaximize } from "react-icons/lu";
+import { FiMinimize2 } from "react-icons/fi";
 
 const Chat = ({socket}) => {
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState("");
     const [showEmojiPicker, setshowEmojiPicker] = useState(false);
+    const [maximize, setMaximize] = useState(false);
 
     useEffect(() => {
         //adds new messages to messages array
@@ -33,9 +36,13 @@ const Chat = ({socket}) => {
     };
 
     return (
-        <div className="h-[9rem] md:h-full w-full relative rounded-md flex justify-center items-center">
-            <div className="absolute h-5/6 w-11/12 flex flex-col justify-between rounded-md bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
-                {showEmojiPicker && <div className="relative"><EmojiPicker set="google" theme="auto" onEmojiClick={handleEmojiClick} width={280}/></div>}
+        <div className={`h-[9rem] md:h-full w-full relative rounded-md flex flex-col justify-center items-center`}>
+            <div className="absolute h-5/6 w-11/12 flex flex-col justify-betwee rounded-md bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
+                <div className="visible md:w-full md:collapse flex justify-end">
+                    {!maximize && <LuMaximize color="white" onClick={() => setMaximize(!maximize)}/>}
+                    {maximize && <FiMinimize2 color="white" onClick={() => setMaximize(!maximize)}/>}
+                </div>
+                {showEmojiPicker && <div className={`relative ${!maximize} h-full w-full`}><EmojiPicker set="google" theme="auto" onEmojiClick={handleEmojiClick} width={280}/></div>}
                 <Messages messages={messages} />
                 <form className="form flex w-full mt-2 items-center justify-center gap-1">
                     <input

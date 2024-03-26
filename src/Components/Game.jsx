@@ -214,7 +214,7 @@ const Game = ({socket, roomId}) => {
     }
 
     return (
-        <div className="relative w-full flex flex-col md:flex-row">
+        <div className="relative h-full w-full flex flex-col md:flex-row">
             <div className="h-screen w-full md:w-9/12 flex flex-col justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url(${bgboard})`}}>
                 <div className="h-[5%] md:h-2/12 w-full text-white flex justify-center">
                     {!PlayGameModal && <div></div>}
@@ -228,11 +228,11 @@ const Game = ({socket, roomId}) => {
                     }
                 </div>
                 <div className="mb-3 h-[75%] md:h-5/6 w-11/12 md:flex-row flex flex-col">
-                    <div className="w-full md:w-2/12 h-[10%] md:h-full flex md:flex-col justify-between bg-red-500">
+                    <div className="w-full md:w-2/12 h-[10%] md:h-full flex md:flex-col justify-between">
                         <Player co="blue" socket={socket} setdiceVal={setdiceVal} setdiceActive={setdiceActive} diceActive={diceActive} possibleMoveCheck={possibleMoveCheck}/>
                         <Player co="green" socket={socket} setdiceVal={setdiceVal} setdiceActive={setdiceActive} diceActive={diceActive} possibleMoveCheck={possibleMoveCheck}/>
                     </div>
-                    <div className="w-full md:w-8/12 h-[74%] md:h-full flex items-center bg-red-300">
+                    <div className="w-full md:w-8/12 h-[74%] md:h-full flex items-center">
                         <Board socket={socket} movePiece={movePiece} isMoveDone={isMoveDone} board={board}/>
                     </div>
                     <div className="w-full md:w-2/12 h-[10%] md:h-full flex md:flex-col justify-between">

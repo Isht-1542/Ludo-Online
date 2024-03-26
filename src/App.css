@@ -72,11 +72,11 @@ h1 {
 @media screen and (max-width: 480px) {
   .dice {
     position: relative;
-    --width: 25px;
+    --width: 26px;
     /* --half-width: calc(var(--width) / 2); */
-    width: 25px;
+    width: 26px;
     /* padding-bottom: 75%; */
-    height: 25px;
+    height: 26px;
     transform-style: preserve-3d;
     transition: 1s ease;
     /* transform: rotateY(60deg); */
@@ -179,6 +179,32 @@ h1 {
 
 .left {
   transform: rotateY(-90deg) translateZ(35px);
+}
+
+@media screen and (max-width: 480px) {
+  .front {
+    transform: translateZ(13px);
+  }
+  
+  .back {
+    transform: rotateX(180deg) translateZ(13px);
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(13px);
+  }
+  
+  .bottom {
+    transform: rotateX(-90deg) translateZ(13px);
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(13px);
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(13px);
+  }
 }
 
 .front::after {
