@@ -31,8 +31,7 @@ const Board = ({socket, board, movePiece, isMoveDone}) => {
     }, [])
 
     return (
-            <div className="h-full w-full flex-col mx-auto rounded-md">
-                
+            <div className="h-[92%] md:h-full w-full flex-col mx-auto rounded-md">
                 <div className="h-2/5 w-full flex">
                     <div className="w-2/5 h-full">
                         <Square colorInd={0} movePiece={movePiece} isMoveDone={isMoveDone} board={board} winColor={winColor} winNo={winNo}/>
@@ -89,7 +88,7 @@ const Board = ({socket, board, movePiece, isMoveDone}) => {
                                 ))}
                             </div>
 
-                            <div className="h-full w-2/4 flex justify-center items-center bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-teal-400 to-amber-200">HOME</div>
+                            <div className="h-full w-2/4 flex justify-center items-center md:text-[16px] text-[10px] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-teal-400 to-amber-200">HOME</div>
 
                             <div className="h-full w-1/4 bg-yellow-500 flex flex-col justify-center items-center">
                                 {board["yellow"].map((item, index) => (

@@ -83,8 +83,9 @@ const Home = () => {
             {
                 !show && 
                 <div className='gap-2 w-50 h-15 relative flex justify-between translate-y-[-1rem]'>
-                    <input value={userName} onChange={(e) => setuserName(e.target.value)} type='text' placeholder='Enter your name' className=' placeholder:text-richblack-700 placeholder:text-[20px] text-[20px] rounded-md bg-richblue-100 px-5 py-2'/>
-                    <button onClick={handleClick} className=' text-center text-[20px] w-[9rem] px-2 py-3 rounded-md font-semibold
+                    <input value={userName} onChange={(e) => setuserName(e.target.value)} type='text' placeholder='Enter your name' 
+                    className=' placeholder:text-richblack-700 md:placeholder:text-[20px] text-[16px] md:text-[20px] rounded-md bg-richblue-100 px-5 py-2'/>
+                    <button onClick={handleClick} className=' text-center text-[10px] md:text-[20px] w-[6rem] md:w-[9rem] px-2 py-3 rounded-md font-semibold
             bg-yellow-500 text-white hover:scale-95 transition-all duration-200'>Let's Go</button>
                 </div>
             }
@@ -92,11 +93,11 @@ const Home = () => {
                 show && 
                 <div className='gap-4 w-70 relative flex justify-between translate-y-[-1rem]'>
                     <Link to={"/createRoom"}>
-                        <button className=' text-center text-[20px] w-[9rem] px-2 py-3 rounded-md font-semibold
+                        <button className=' text-center text-[16px] md:text-[20px] w-[9rem] px-2 py-3 rounded-md font-semibold
             bg-yellow-500 text-white hover:scale-95 transition-all duration-200'>Invite friend</button>
                     </Link>
                     <Link to={"/joinRoom"}>
-                        <button className=' text-center text-[20px] w-[9rem] px-2 py-3 rounded-md font-semibold
+                        <button className=' text-center text-[16px] md:text-[20px] w-[9rem] px-2 py-3 rounded-md font-semibold
             bg-yellow-500 text-white hover:scale-95 transition-all duration-200'>Join Room</button>
                     </Link>
                 </div>

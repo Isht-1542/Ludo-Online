@@ -57,19 +57,19 @@ const WaitingRoom = ({socket, roomId}) => {
     return (
         <>
         <div className="h-screen w-full bg-cover bg-center" style={{ backgroundImage: `url(${bgImg})`}} >
-            <div className="h-full w-1/2 flex items-center justify-center">
+            <div className="h-full md:w-1/2 flex items-center justify-center">
                 <div className="h-5/6 w-4/6 flex flex-col bg-yellow-40 items-center justify-center gap-6">
-                    <div className="h-1/6 w-full text-cyan-500 text-lg flex items-center justify-center">
+                    <div className="h-1/6 w-full md:text-lg text-sm text-cyan-500 flex items-center justify-center">
                         Waiting for {Players[0]} to start the game....
                     </div>
-                    <div className="h-4/6 w-11/12 rounded-lg flex flex-col items-center justify-center gap-4">
+                    <div className="h-3/6 md:h-4/6 w-11/12 rounded-lg flex flex-col items-center justify-center gap-11 md:gap-4">
                         {Players.map((username, index) => (
-                            <div key={index} className="h-1/5 w-5/6 rounded-lg text-white bg-black flex items-center gap-4 
-                            bg-cover bg-center" style={{ backgroundImage: `url(${bgImgUrls[index]})`}}>
-                                {index===0 && <img src={userblue} alt="user" className="w-11 h-11 rounded-full ml-1"/>}
-                                {index===1 && <img src={userred} alt="user" className="w-11 h-11 rounded-full ml-1"/>}
-                                {index===2 && <img src={usergreen} alt="user" className="w-11 h-11 rounded-full ml-1"/>}
-                                {index===3 && <img src={useryellow} alt="user" className="w-11 h-11 rounded-full ml-1"/>}
+                            <div key={index} className="h-1/5 w-5/6 rounded-lg text-white bg-black flex items-center gap-2 md:gap-4 
+                            bg-cover bg-right" style={{ backgroundImage: `url(${bgImgUrls[index]})`}}>
+                                {index===0 && <img src={userblue} alt="user" className="w-7 h-7 md:w-11 md:h-11 rounded-full ml-1"/>}
+                                {index===1 && <img src={userred} alt="user" className="w-7 h-7 md:w-11 md:h-11 rounded-full ml-1"/>}
+                                {index===2 && <img src={usergreen} alt="user" className="w-7 h-7 md:w-11 md:h-11 rounded-full ml-1"/>}
+                                {index===3 && <img src={useryellow} alt="user" className="w-7 h-7 md:w-11 md:h-11 rounded-full ml-1"/>}
                                 <p className="text-white text-xl">{username}</p>
                             </div>
                         ))}

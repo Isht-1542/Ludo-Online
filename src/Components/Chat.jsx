@@ -33,8 +33,8 @@ const Chat = ({socket}) => {
     };
 
     return (
-        <div className="outerContainer max-h-screen h-full w-full bg-transparent rounded-md flex justify-center items-center">
-            <div className="absolute container h-5/6 w-11/12 flex flex-col justify-between rounded-md bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <div className="h-[9rem] md:h-full w-full relative rounded-md flex justify-center items-center">
+            <div className="absolute h-5/6 w-11/12 flex flex-col justify-between rounded-md bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
                 {showEmojiPicker && <div className="relative"><EmojiPicker set="google" theme="auto" onEmojiClick={handleEmojiClick} width={280}/></div>}
                 <Messages messages={messages} />
                 <form className="form flex w-full mt-2 items-center justify-center gap-1">

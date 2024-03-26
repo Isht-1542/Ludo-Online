@@ -120,12 +120,21 @@ const Dice = ({co, socket, setdiceVal, setdiceActive, diceActive, possibleMoveCh
     setcurrColor(chanceColor);
   });
 
+  
+  useEffect(() => {
+    // Get the computed value of --half-width
+    const halfWidth = getComputedStyle(document.documentElement).getPropertyValue('--half-width');
 
+    // Print the value in the console
+    console.log("Half width:", halfWidth);
+  }, []);
+  
+  
   return (
     <div className="container h-full w-full">
     {(currColor===co) &&
-    <div className="container w-full h-full flex flex-col items-center mt-2" onClick={rollDice}>  
-      <div id="dice" className={`dice hover:animate-none ${diceActive && 'motion-safe:animate-bounce'}`}>
+    <div className="container w-full h-full flex flex-col items-center justify-center" onClick={rollDice}>  
+      <div className={`dice hover:animate-none ${diceActive && 'motion-safe:animate-bounce'}`}>
           <div className="face front"></div>
           <div className="face back">
             <div className="dot six-1"></div>
@@ -159,7 +168,7 @@ const Dice = ({co, socket, setdiceVal, setdiceActive, diceActive, possibleMoveCh
           </div>
       </div>
 
-      <button className="roll">
+      <button className="roll cursor-pointer text-[#b33951] md:text-[70%] text-[0%] mt-[5%] py-[1%] px-[13%] rounded-md font-semibold md:border-2 border-[#b33951] transition duration-400 hover:text-white hover:bg-[#b33951]">
           Roll Dice
       </button>
     </div>

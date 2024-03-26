@@ -89,11 +89,11 @@ const CreateRoom = ({socket, roomId}) => {
             </div>
             <div className=' overflow-y-hidden relative flex w-full mx-auto h-5/6 max-w-maxContent flex-col 
                 items-center justify-center gap-y-11'>
-                <h1 className='font-bold text-yellow-100 font-edu-sa text-6xl translate-y-[-1rem]'>Invite Friend</h1>
+                <h1 className='font-bold text-yellow-100 font-edu-sa text-5xl md:text-6xl translate-y-[-1rem]'>Invite Friend</h1>
                 <div className='gap-x-2 w-50 h-15 relative flex justify-between'>
-                    <input disabled={true} value={roomId} type="text" className=' w-[15rem] text-white text-lg 
+                    <input disabled={true} value={roomId} type="text" className=' w-[12rem] md:w-[15rem] text-white text-lg 
                     rounded-md bg-yellow-800 text-[20px] px-5 py-2'/>
-                    <button onClick={copytext} className='text-center text-[20px] w-[9rem] px-2 py-3 rounded-md font-semibold
+                    <button onClick={copytext} className='text-center text-[20px] w-[7rem] md:w-[9rem] px-2 py-3 rounded-md font-semibold
                     bg-yellow-500 text-white hover:scale-95 transition-all duration-200'>{copyBtnValue}</button>
                 </div>
                 <div>
@@ -101,7 +101,7 @@ const CreateRoom = ({socket, roomId}) => {
                         onClick={() => {
                             navigate(`/waitingRoom/${roomId}`);
                         }}
-                    className='text-center relative text-[20px] w-[9rem] px-2 py-3 rounded-md font-semibold
+                    className='text-center relative text-[20px] w-[8rem] md:w-[9rem] px-2 py-3 rounded-md font-semibold
                     bg-yellow-500 text-white hover:scale-95 transition-all duration-200'>Play Game</button>
                 </div> 
             </div>

@@ -35,7 +35,7 @@ const Square = ({board, colorInd, movePiece, isMoveDone, winColor, winNo}) => {
         <div className={`h-full relative bg-${pieceColor}-500 flex justify-center items-center rounded-md border border-black`}>
             {<div className="h-4/6 w-4/6 grid grid-cols-2 place-items-center rounded-md bg-white border-[1.5px] border-black">
                 {winnerNo===null && arr.map((item, index) => (
-                    <div key={index} className={`relative h-9 w-9 rounded-md shadow-xl shadow-gray-400 bg-gray-200 border-[1.5px] border-black`}> 
+                    <div key={index} className={`relative h-7 w-7 md:h-9 md:w-9 rounded-md shadow-xl shadow-gray-400 bg-gray-200 border-[1.5px] border-black`}> 
                         {inBoard[pieceColor].includes(item) ? (<Piece colorInd={colorInd} movePiece={movePiece} id={item} isMoveDone={isMoveDone}/>):(<div/>)}
                     </div>
                 ))}

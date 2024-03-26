@@ -214,9 +214,9 @@ const Game = ({socket, roomId}) => {
     }
 
     return (
-        <div className="h-screen w-full flex">
-            <div className="h-screen w-9/12 flex flex-col justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url(${bgboard})`}}>
-                <div className="h-2/12 w-full text-white flex justify-center">
+        <div className="relative w-full flex flex-col md:flex-row">
+            <div className="h-screen w-full md:w-9/12 flex flex-col justify-center items-center bg-cover bg-center" style={{ backgroundImage: `url(${bgboard})`}}>
+                <div className="h-[5%] md:h-2/12 w-full text-white flex justify-center">
                     {!PlayGameModal && <div></div>}
                     {PlayGameModal && color==="blue" &&
                     <div className="flex gap-2 items-center justify-center bg-gray-900 rounded-md mx-auto mb-1">
@@ -227,21 +227,22 @@ const Game = ({socket, roomId}) => {
                     </div>
                     }
                 </div>
-                <div className="mb-3 h-5/6 w-11/12 flex">
-                    <div className="w-2/12 flex flex-col justify-between">
+                <div className="mb-3 h-[75%] md:h-5/6 w-11/12 md:flex-row flex flex-col">
+                    <div className="w-full md:w-2/12 h-[10%] md:h-full flex md:flex-col justify-between bg-red-500">
                         <Player co="blue" socket={socket} setdiceVal={setdiceVal} setdiceActive={setdiceActive} diceActive={diceActive} possibleMoveCheck={possibleMoveCheck}/>
                         <Player co="green" socket={socket} setdiceVal={setdiceVal} setdiceActive={setdiceActive} diceActive={diceActive} possibleMoveCheck={possibleMoveCheck}/>
                     </div>
-                    <div className="w-8/12">
+                    <div className="w-full md:w-8/12 h-[74%] md:h-full flex items-center bg-red-300">
                         <Board socket={socket} movePiece={movePiece} isMoveDone={isMoveDone} board={board}/>
                     </div>
-                    <div className="w-2/12 flex flex-col justify-between">
+                    <div className="w-full md:w-2/12 h-[10%] md:h-full flex md:flex-col justify-between">
                         <Player co="red" socket={socket} setdiceVal={setdiceVal} setdiceActive={setdiceActive} diceActive={diceActive} possibleMoveCheck={possibleMoveCheck}/>
                         <Player co="yellow" socket={socket} setdiceVal={setdiceVal} setdiceActive={setdiceActive} diceActive={diceActive} possibleMoveCheck={possibleMoveCheck}/>
                     </div>
                 </div>
+                <div className="h-[15%] md:h-[0%]"></div>
             </div>
-            <div className="relative w-3/12 object-contain">
+            <div className="top-[80%] left-[30%] md:h-screen md:left-0 md:top-0 absolute md:relative w-4/6 md:w-3/12">
                 <Chat socket={socket}/>
             </div>
         </div>
