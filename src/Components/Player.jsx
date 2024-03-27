@@ -8,9 +8,7 @@ import useryellow from "../assets/useryellow.png"
 
 const Player = ({co, socket, setdiceVal, setdiceActive, diceActive, possibleMoveCheck}) => {
 
-    // const { ctoU } = useSelector((state) => state.game);
-
-    const ctoU = {"blue":"hellods ggsrgd"};
+    const { ctoU } = useSelector((state) => state.game);
 
     useEffect(() => {
         console.log("Host page rendered again");
