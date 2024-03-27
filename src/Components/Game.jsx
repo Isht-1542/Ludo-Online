@@ -228,14 +228,14 @@ const Game = ({socket, roomId}) => {
                     }
                 </div>
                 <div className="mb-3 h-[75%] md:h-5/6 w-11/12 md:flex-row flex flex-col">
-                    <div className="w-full md:w-2/12 h-[10%] md:h-full flex md:flex-col justify-between">
+                    <div className="w-full md:w-2/12 h-[11%] md:h-full flex md:flex-col justify-between">
                         <Player co="blue" socket={socket} setdiceVal={setdiceVal} setdiceActive={setdiceActive} diceActive={diceActive} possibleMoveCheck={possibleMoveCheck}/>
                         <Player co="green" socket={socket} setdiceVal={setdiceVal} setdiceActive={setdiceActive} diceActive={diceActive} possibleMoveCheck={possibleMoveCheck}/>
                     </div>
                     <div className="w-full md:w-8/12 h-[74%] md:h-full flex items-center">
                         <Board socket={socket} movePiece={movePiece} isMoveDone={isMoveDone} board={board}/>
                     </div>
-                    <div className="w-full md:w-2/12 h-[10%] md:h-full flex md:flex-col justify-between">
+                    <div className="w-full md:w-2/12 h-[11%] md:h-full flex md:flex-col justify-between">
                         <Player co="red" socket={socket} setdiceVal={setdiceVal} setdiceActive={setdiceActive} diceActive={diceActive} possibleMoveCheck={possibleMoveCheck}/>
                         <Player co="yellow" socket={socket} setdiceVal={setdiceVal} setdiceActive={setdiceActive} diceActive={diceActive} possibleMoveCheck={possibleMoveCheck}/>
                     </div>

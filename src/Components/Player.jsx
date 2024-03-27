@@ -8,17 +8,19 @@ import useryellow from "../assets/useryellow.png"
 
 const Player = ({co, socket, setdiceVal, setdiceActive, diceActive, possibleMoveCheck}) => {
 
-    const { ctoU } = useSelector((state) => state.game);
+    // const { ctoU } = useSelector((state) => state.game);
+
+    const ctoU = {"blue":"hellods ggsrgd"};
 
     useEffect(() => {
         console.log("Host page rendered again");
     },[ctoU]) 
 
     return (
-        <div className="flex flex-col h-full md:h-2/5 w-[30%] md:w-full justify-center items-center">
+        <div className="flex flex-col h-full md:h-2/5 w-[32%] md:w-full justify-center items-center">
             <div className="h-full w-full bg-grey-200 p-2">
                 <div className="h-full w-full flex md:flex-col justify-center bg-white border-2 border-black shadow-lg rounded-xl overflow-hidden">
-                    <div className={`flex md:flex-col h-full md:h-2/6 w-1/2 md:w-full items-center justify-center gap-1 md:gap-0
+                    <div className={`flex flex-col h-full md:h-2/6 w-1/2 md:w-full items-center justify-center gap-1 md:gap-0
                     ${co==="blue" && 'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 to-blue-400'}
                     ${co==="red" && 'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 to-red-400'}
                     ${co==="green" && 'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 to-lime-500'}
@@ -33,7 +35,7 @@ const Player = ({co, socket, setdiceVal, setdiceActive, diceActive, possibleMove
                             
                         </div>
                         {/* <!-- Player Name --> */}
-                        {ctoU[co]!=null && <div className="text-center text-sm font-serif font-medium text-black">{ctoU[co]}</div>}
+                        {ctoU[co]!=null && <div className="text-center w-full text-wrap leading-[0.6rem] text-[0.6rem] md:text-base font-serif text-black">{ctoU[co]}</div>}
                     </div>
                     {/* <!-- Player Card Body --> */}
                     <div className="bg-gray-200 p-1 md:p-3 h-full md:h-4/6  w-1/2 md:w-full border-t border-gray-300">
